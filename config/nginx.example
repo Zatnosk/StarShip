@@ -1,0 +1,36 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        listen 443 ssl;
+        listen [::]:443 ssl;
+        ssl_certificate_key     /your/ssl/cert/key;
+        ssl_certificate         /your/ssl/cert;
+
+        root /home/example/starship/public/;
+        server_name example.com;
+
+        index index.html index.htm index.nginx-debian.html index.php;
+
+        location /.well-known/ {
+                types {}
+                default_type    application/json;
+                try_files $uri $uri/ =404;
+        }
+
+        location /logs/ {
+                return 403;
+        }
+
+        location / {
+                rewrite ^/inbox$ /inbox.php last;
+
+                try_files $uri $uri/ =404;
+        }
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+        }
+}
+

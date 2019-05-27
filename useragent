@@ -1,0 +1,3 @@
+<?php 
+$useragent = "your client here (". file_get_contents("../version") ."; +https://". $_SERVER['HTTP_HOST'] .")";
+?>
