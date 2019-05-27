@@ -34,41 +34,41 @@ Requirements:
 
 ### Version 0.0.1
 * Initial ActivityPub functionality
-* * Create and Delete Note activities
-* * Create Follow activities
-* * Accept or Reject received Create Follow activities
-* * Access Actor Inbox contents
+  * Create and Delete Note activities
+  * Create Follow activities
+  * Accept or Reject received Create Follow activities
+  * Access Actor Inbox contents
 * Initial Account functionality
-* * Log in
-* * View a "timeline" of objects received to your Inbox
+  * Log in
+  * View a "timeline" of objects received to your Inbox
 
 ### Version 0.1.0
 * Core ActivityPub functionality
-* * Create new Actor profile
-* * Update Actor profile
-* * Processing Create and Delete activities from remote servers
+  * Create new Actor profile
+  * Update Actor profile
+  * Processing Create and Delete activities from remote servers
 * Core Account functionality
-* * Create new accounts
-* * Authenticate existing accounts
+  * Create new accounts
+  * Authenticate existing accounts
 * Core micro-blogging web client
 * Core API
-* * Ideally, the API should be *structurally* consistent with existing ActivityPub server APIs, for easier cross-platform client app development
+  * Ideally, the API should be *structurally* consistent with existing ActivityPub server APIs, for easier cross-platform client app development
 
 ### Version 1.0.0
 * Full ActivityPub functionality
 * Full Account functionality
-* * Create/authenticate existing accounts
-* * Update account information
-* * Account deletion
-* * Account-level received-content filters
+  * Create/authenticate existing accounts
+  * Update account information
+  * Account deletion
+  * Account-level received-content filters
 * Core Moderation functionality
-* * Temporary/Permanent local account suspensions
-* * Temporary/Permanent remote account blocks
-* * Temporary/Permanent servers blocks
-* * Moderator-level post deletion (that *prevents* re-fetching that post)
-* * Moderator-added content warnings
-* * Account-level blocks of accounts or servers
-* * A local reporting system
+  * Temporary/Permanent local account suspensions
+  * Temporary/Permanent remote account blocks
+  * Temporary/Permanent servers blocks
+  * Moderator-level post deletion (that *prevents* re-fetching that post)
+  * Moderator-added content warnings
+  * Account-level blocks of accounts or servers
+  * A local reporting system
 * Full micro-blogging web client
 * Full blogging web client
 * Full API
