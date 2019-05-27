@@ -1,0 +1,9 @@
+acct/
+
+*.log
+
+*.pem
+
+dummyauth.json
+
+config/*.ini
