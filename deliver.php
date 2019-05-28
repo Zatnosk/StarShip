@@ -14,7 +14,7 @@ function deliver($body, $inbox, $key) {
   // signs $data and puts the signature in $signature
   // returns a 500 error if the function fails for some reason
   if (openssl_sign($data, $signature, $key, OPENSSL_ALGO_SHA256) === FALSE) {
-    header('HTTP/1.1 500 Internal Server Error');
+    http_response_code(500);
     die('unable to sign');
   }
 

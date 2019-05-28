@@ -116,12 +116,12 @@ $headers = getRequestHeaders();
 $verified = verify_signature($headers);
 // return Forbidden with informative message if signature is wrong
 if ($verified === false) {
-  header('HTTP/1.1 403 Forbidden');
+  http_response_code(403);
   die('Invalid signature.');
 }
 // return Server Error with informative message if signature verification outright fails
 if ($verified !== true) {
-  header('HTTP/1.1 500 Internal Server Error');
+  http_response_code(500)
   die('Error verifying signature: '. $verified);
 }
 // signature is verified, continue
