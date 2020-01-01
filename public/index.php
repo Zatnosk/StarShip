@@ -11,7 +11,7 @@ if (isset($_GET['m'])) {
 }
 if ($_SESSION['authed'] !== true) echo '<p>Nothing to see here yet, move along.</p>';
 
-else include "../post.php";
+else include "ui/post.php";
 ?>
 </body>
 </html>
