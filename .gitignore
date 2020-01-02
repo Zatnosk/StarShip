@@ -7,3 +7,5 @@ acct/
 dummyauth.json
 
 config/*.ini
+
+logs/*
