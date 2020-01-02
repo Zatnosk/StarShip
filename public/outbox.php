@@ -23,6 +23,7 @@ function fetchInbox($actor) {
     - read private key of specific actor posting to the outbox
 */
 
+$_POST['type'] = 'Note';
 $_POST['published'] = date(DATE_W3C);
 
 // validate this all later
