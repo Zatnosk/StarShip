@@ -18,4 +18,4 @@ echo "<h3>You are logged in</h3>". $_SESSION['actor'];
 
 </div>
 <h3>Most recent post to inbox</h3>
-<?php include "../../logs/recent.html"; ?>
+<?php include __DIR__."/../../logs/recent.html"; ?>
