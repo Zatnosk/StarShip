@@ -13,21 +13,21 @@ class Activity {
   
   // load an activity's properties from the database into the Activity object
   function load($id) {
-    if ($new === false) throw new Exception('requires a blank Activity object');
+    if ($new === false) throw new \Exception('requires a blank Activity object');
   }
 
   // Stores the properties of the Activity object into the database
   // use "update on duplicate key"
   function save() {
-    if ($new === true) throw new Exception('requires a populated Activity object');
+    if ($new === true) throw new \Exception('requires a populated Activity object');
   }
 
   /* loads an activity's properties from an unserialized-JSON array into the Activity object */
   function fill($json_array) {
-    if ($json_array === null) throw new Exception('no Activity data provided');
+    if ($json_array === null) throw new \Exception('no Activity data provided');
     // verify that certain required properties are set
     $valid = self::validateActivity($json_array);
-    if ($valid === false) throw new Exception('invalid Activity data');
+    if ($valid === false) throw new \Exception('invalid Activity data');
 
     // loads the array into the object, isn't this nice
     $this->activity_array = $json_array;
@@ -121,9 +121,9 @@ class Create extends Activity {
 
     // if $wrapped is false, $json_array is an AP Object which needs to be wrapped in a Create activity
     else { // verify valid ActivityPub object
-      if ($json_array === null) throw new Exception('cannot create null Activity');
+      if ($json_array === null) throw new \Exception('cannot create null Activity');
       $valid = self::validateObject($json_array);
-      if ($valid === false) throw new Exception('invalid Create Object data');
+      if ($valid === false) throw new \Exception('invalid Create Object data');
 
       // initialize activity_array and start filling with the Activity properties
       $this->activity_array = [];
